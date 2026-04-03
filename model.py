@@ -146,9 +146,9 @@ class AtlasModel:
             params,
             dtrain,
             num_boost_round=config.XGBOOST_PARAMS['n_estimators'],
-            evals=evals,
-            early_stopping_rounds=20,
-            verbose_eval=10
+            evals=evals if evals else None,
+            early_stopping_rounds=20 if evals else None,
+            verbose_eval=False
         )
 
         # Compute training metrics
