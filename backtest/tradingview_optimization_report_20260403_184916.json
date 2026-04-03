@@ -1,0 +1,254 @@
+{
+  "timestamp": "2026-04-03T18:49:16.344367",
+  "optimization_sweep": [
+    {
+      "confidence_threshold": 0.5,
+      "signals_generated": 20,
+      "executed_trades": 20,
+      "winning_trades": 6,
+      "losing_trades": 14,
+      "win_rate": 0.3,
+      "total_pnl": -416.73,
+      "final_value": 99583.27,
+      "total_return_pct": -0.42,
+      "avg_trade_pnl": -20.84,
+      "trade_details": [
+        {
+          "symbol": "SAP",
+          "confidence": 0.591,
+          "position_value": 5000.0,
+          "expected_return": 0.425,
+          "actual_return": -0.183,
+          "pnl": -9.16,
+          "profitable": "False"
+        },
+        {
+          "symbol": "ORCL",
+          "confidence": 0.549,
+          "position_value": 5000.0,
+          "expected_return": 0.212,
+          "actual_return": 0.844,
+          "pnl": 42.2,
+          "profitable": "True"
+        },
+        {
+          "symbol": "ADBE",
+          "confidence": 0.548,
+          "position_value": 5000.0,
+          "expected_return": 0.146,
+          "actual_return": 0.317,
+          "pnl": 15.85,
+          "profitable": "True"
+        },
+        {
+          "symbol": "PG",
+          "confidence": 0.547,
+          "position_value": 5000.0,
+          "expected_return": 0.15,
+          "actual_return": -1.569,
+          "pnl": -78.44,
+          "profitable": "False"
+        },
+        {
+          "symbol": "UBER",
+          "confidence": 0.546,
+          "position_value": 5000.0,
+          "expected_return": 0.211,
+          "actual_return": -1.713,
+          "pnl": -85.67,
+          "profitable": "False"
+        },
+        {
+          "symbol": "NVDA",
+          "confidence": 0.536,
+          "position_value": 5000.0,
+          "expected_return": 0.152,
+          "actual_return": -1.558,
+          "pnl": -77.91,
+          "profitable": "False"
+        },
+        {
+          "symbol": "XOM",
+          "confidence": 0.533,
+          "position_value": 5000.0,
+          "expected_return": 0.128,
+          "actual_return": -0.019,
+          "pnl": -0.93,
+          "profitable": "False"
+        },
+        {
+          "symbol": "META",
+          "confidence": 0.531,
+          "position_value": 5000.0,
+          "expected_return": 0.122,
+          "actual_return": -1.294,
+          "pnl": -64.69,
+          "profitable": "False"
+        },
+        {
+          "symbol": "GOOGL",
+          "confidence": 0.525,
+          "position_value": 5000.0,
+          "expected_return": 0.065,
+          "actual_return": -0.541,
+          "pnl": -27.03,
+          "profitable": "False"
+        },
+        {
+          "symbol": "CVX",
+          "confidence": 0.512,
+          "position_value": 5000.0,
+          "expected_return": 0.093,
+          "actual_return": 0.598,
+          "pnl": 29.88,
+          "profitable": "True"
+        },
+        {
+          "symbol": "NFLX",
+          "confidence": 0.509,
+          "position_value": 5000.0,
+          "expected_return": 0.057,
+          "actual_return": -1.844,
+          "pnl": -92.18,
+          "profitable": "False"
+        },
+        {
+          "symbol": "JPM",
+          "confidence": 0.507,
+          "position_value": 5000.0,
+          "expected_return": 0.014,
+          "actual_return": -0.549,
+          "pnl": -27.47,
+          "profitable": "False"
+        },
+        {
+          "symbol": "HD",
+          "confidence": 0.507,
+          "position_value": 5000.0,
+          "expected_return": 0.038,
+          "actual_return": -0.269,
+          "pnl": -13.47,
+          "profitable": "False"
+        },
+        {
+          "symbol": "INTC",
+          "confidence": 0.507,
+          "position_value": 5000.0,
+          "expected_return": 0.044,
+          "actual_return": 1.629,
+          "pnl": 81.46,
+          "profitable": "True"
+        },
+        {
+          "symbol": "CSCO",
+          "confidence": 0.507,
+          "position_value": 5000.0,
+          "expected_return": 0.012,
+          "actual_return": -1.83,
+          "pnl": -91.51,
+          "profitable": "False"
+        },
+        {
+          "symbol": "TSLA",
+          "confidence": 0.502,
+          "position_value": 5000.0,
+          "expected_return": 0.013,
+          "actual_return": 0.954,
+          "pnl": 47.68,
+          "profitable": "True"
+        },
+        {
+          "symbol": "AAPL",
+          "confidence": 0.5,
+          "position_value": 5000.0,
+          "expected_return": -0.115,
+          "actual_return": -0.859,
+          "pnl": -42.94,
+          "profitable": "False"
+        },
+        {
+          "symbol": "MSFT",
+          "confidence": 0.5,
+          "position_value": 5000.0,
+          "expected_return": -0.191,
+          "actual_return": -0.173,
+          "pnl": -8.64,
+          "profitable": "False"
+        },
+        {
+          "symbol": "AMZN",
+          "confidence": 0.5,
+          "position_value": 5000.0,
+          "expected_return": -0.014,
+          "actual_return": 0.627,
+          "pnl": 31.34,
+          "profitable": "True"
+        },
+        {
+          "symbol": "JNJ",
+          "confidence": 0.5,
+          "position_value": 5000.0,
+          "expected_return": -0.108,
+          "actual_return": -0.902,
+          "pnl": -45.11,
+          "profitable": "False"
+        }
+      ]
+    },
+    {
+      "confidence_threshold": 0.55,
+      "signals_generated": 1,
+      "executed_trades": 1,
+      "winning_trades": 1,
+      "losing_trades": 0,
+      "win_rate": 1.0,
+      "total_pnl": 49.15,
+      "final_value": 100049.15,
+      "total_return_pct": 0.05,
+      "avg_trade_pnl": 49.15,
+      "trade_details": [
+        {
+          "symbol": "SAP",
+          "confidence": 0.591,
+          "position_value": 5000.0,
+          "expected_return": 0.425,
+          "actual_return": 0.983,
+          "pnl": 49.15,
+          "profitable": "True"
+        }
+      ]
+    }
+  ],
+  "monte_carlo_analysis": {
+    "num_simulations": 1000,
+    "mean_return": 0.469,
+    "std_return": 1.038,
+    "min_return": -1.91,
+    "max_return": 3.12,
+    "percentile_5": -1.23,
+    "percentile_25": -0.19,
+    "percentile_50": 0.37,
+    "percentile_75": 1.12,
+    "percentile_95": 2.412,
+    "best_case": 103120.0,
+    "worst_case": 98090.0,
+    "mean_final_value": 100468.64
+  },
+  "recommended_signals": [
+    {
+      "symbol": "SAP",
+      "confidence": 0.591,
+      "expected_return": 0.425,
+      "volatility": 1.079,
+      "win_rate": 0.659,
+      "position_size": 0.05,
+      "position_value": 5000.0
+    }
+  ],
+  "summary": {
+    "initial_capital": 100000,
+    "best_return": 0.05,
+    "best_win_rate": 1.0,
+    "optimal_threshold": 0.5
+  }
+}
