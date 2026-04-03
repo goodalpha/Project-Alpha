@@ -1,0 +1,31 @@
+# Project ATLAS - MVP Dependencies
+
+# Core Data & Science
+pandas>=1.5.0
+numpy>=1.23.0
+scipy>=1.9.0
+
+# ML & Backtesting
+xgboost>=1.7.0
+scikit-learn>=1.2.0
+
+# Data Sources
+yfinance>=0.2.20
+requests>=2.28.0
+
+# Web Framework (for dashboard)
+streamlit>=1.20.0
+
+# Execution (optional for live trading)
+# alpaca-trade-api>=2.11.0
+# python-ibm>=10.0.0
+
+# Utilities
+python-dotenv>=0.21.0
+pyyaml>=6.0
+
+# Development
+pytest>=7.2.0
+black>=22.10.0
+flake8>=5.0.0
+mypy>=0.990
