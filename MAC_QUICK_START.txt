@@ -1,0 +1,166 @@
+╔═══════════════════════════════════════════════════════════════════════════╗
+║              🍎 ATLAS on Mac - QUICK START (5 MINUTES)                    ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+
+STEP 1: INSTALL DEPENDENCIES (One-time)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+$ cd ~/Project-Alpha
+$ python3 -m venv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ brew install chromedriver
+
+✓ Check: python3 --version (should be 3.9+)
+✓ Check: chromedriver --version
+✓ Check: python3 -c "import selenium; print('OK')"
+
+STEP 2: SET UP CREDENTIALS (One-time)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+$ cd ~/Project-Alpha
+$ cp .env.template .env
+$ nano .env
+
+Add your TradingView credentials:
+  TRADINGVIEW_EMAIL=puunvasa1996@gmail.com
+  TRADINGVIEW_PASSWORD=Puunvasa11
+
+Save: Ctrl+X, Y, Enter
+
+STEP 3: ACTIVATE VIRTUAL ENVIRONMENT (Every time you start)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+$ cd ~/Project-Alpha
+$ source venv/bin/activate
+(you'll see "(venv)" at start of terminal prompt)
+
+STEP 4: RUN THE SYSTEM (Daily)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+A) Generate Trading Signals
+   $ python3 tradingview_strategy_optimizer.py
+   → Shows top 10 recommended stocks to buy
+
+B) Run Live Scraper (monitors TradingView every 5 min)
+   $ python3 tradingview_scraper.py &
+   → Tracks your positions and P&L automatically
+
+C) View Dashboard (open browser to http://localhost:8501)
+   $ python3 -m streamlit run dashboard.py
+   → Shows real-time portfolio, P&L, risk metrics
+
+D) Train Model (after 8 hours of trading)
+   $ python3 tradingview_model_trainer.py
+   → Validates signals, trains improved model
+
+═══════════════════════════════════════════════════════════════════════════
+
+TYPICAL WORKFLOW (Every Trading Day)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+9:00 AM:  Open Terminal 1
+          $ cd ~/Project-Alpha && source venv/bin/activate
+          $ python3 tradingview_scraper.py &
+          (runs in background, monitoring TradingView)
+
+9:05 AM:  Open Terminal 2 (Cmd+T for new tab)
+          $ python3 -m streamlit run dashboard.py
+          (opens http://localhost:8501 in browser)
+
+9:15 AM:  Generate signals
+          $ python3 tradingview_strategy_optimizer.py
+          (shows top stocks to buy today)
+
+9:30 AM:  Execute signals on TradingView
+          - Open www.tradingview.com
+          - For each signal: click stock → Paper Trading → Buy
+          - Watch ATLAS dashboard update in real-time
+
+4:00 PM:  Review day's performance
+          - Check dashboard for final P&L
+          - Review position performance
+
+5:00 PM:  Stop scraper and dashboard
+          Kill Terminal 1: Ctrl+C
+          Kill Terminal 2: Ctrl+C
+          $ deactivate (exit venv)
+
+═══════════════════════════════════════════════════════════════════════════
+
+TROUBLESHOOTING
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+"chromedriver not found"
+  → brew install chromedriver
+  → chromedriver --version (should show version)
+
+"ModuleNotFoundError: No module named 'selenium'"
+  → pip install -r requirements.txt
+  → python3 -c "import selenium" (should work)
+
+"Permission denied"
+  → sudo chmod +x /usr/local/bin/chromedriver
+  → chmod 600 .env
+
+"Port already in use" (for Streamlit)
+  → Kill existing: kill -9 $(lsof -t -i :8501)
+  → Or use different port: streamlit run dashboard.py --server.port 8502
+
+═══════════════════════════════════════════════════════════════════════════
+
+USEFUL COMMANDS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Stop running script:           Ctrl+C
+Run in background:            python3 script.py &
+List running processes:       jobs
+Kill background process:      kill %1
+View recent logs:             tail -50 logs/tradingview_scraper.log
+View optimization results:    cat backtest/tradingview_optimization_report_*.json | python3 -m json.tool
+Check Python version:         python3 --version
+Activate venv:                source venv/bin/activate
+Deactivate venv:              deactivate
+Update packages:              pip install --upgrade -r requirements.txt
+
+═══════════════════════════════════════════════════════════════════════════
+
+KEYBOARD SHORTCUTS
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+New Terminal tab:             Cmd+T
+Close Terminal tab:           Cmd+W
+Switch between tabs:          Cmd+} or Cmd+{
+Open folder in Finder:        open .
+Open file in editor:          code filename.txt
+Terminal clear:               Cmd+K
+
+═══════════════════════════════════════════════════════════════════════════
+
+EXPECTED OUTPUT EXAMPLES
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✓ Installation successful:
+  $ python3 -c "import selenium; print('OK')"
+  OK
+
+✓ ChromeDriver ready:
+  $ chromedriver --version
+  ChromeDriver 123.0.6312.4 (abcdef123...)
+
+✓ Virtual environment active:
+  (venv) user@Mac:~/Project-Alpha$
+
+✓ Scraper running:
+  2026-04-03 09:30:00 INFO Logging in to TradingView...
+  2026-04-03 09:30:05 INFO ✅ Successfully logged in
+
+✓ Dashboard starting:
+  Streamlit app is running at: http://localhost:8501
+
+═══════════════════════════════════════════════════════════════════════════
+
+READY TO TRADE! 🚀
+
+Full documentation: See MAC_SETUP_GUIDE.md
+Security guide:     See SECURE_SETUP.md
+Backtest results:   See TRADINGVIEW_BACKTEST_RESULTS.md
+
+═══════════════════════════════════════════════════════════════════════════
