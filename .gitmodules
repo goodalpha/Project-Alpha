@@ -1,0 +1,3 @@
+[submodule "src/FinceptTerminal"]
+	path = src/FinceptTerminal
+	url = https://github.com/Fincept-Corporation/FinceptTerminal.git
